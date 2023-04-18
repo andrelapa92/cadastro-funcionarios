@@ -1,6 +1,6 @@
 <?php
-    include('./app/config.php');
-    include('modal-remove-func.php');
+    require_once(__DIR__ . '/../app/config.php');
+    include('confirmRemoveFunc.php');
 
     $sql = "SELECT id, nome, dt_nascimento, cpf, email, estado_civil FROM funcionarios";
 
@@ -52,7 +52,7 @@
     echo "</table>";
 
     } else {
-        echo "Nenhum funcionário cadastrado. Clique no botão abaixo para começar.";
+        echo "<p class='text-center'>Nenhum funcionário cadastrado. Clique no botão abaixo para começar.</p>";
     }
 
     $conn->close();

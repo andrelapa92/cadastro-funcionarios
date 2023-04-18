@@ -1,11 +1,11 @@
 <?php
-include('./views/header.php');
-include('./app/models/valida-cpf.php');
+include('./components/header.php');
+include('./app/models/modelCadastro.php');
 ?>
 
         <div class="container mt-3 mb-3">
             <h1 class="text-center mb-5">Cadastro de Funcionário</h1>
-            <form id="form-cadastro" action="processa-cadastro.php" method="post">
+            <form id="form-cadastro" action="./app/models/modelCadastro.php" method="post">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome completo:</label>
                     <input type="text" class="form-control" id="nome" name="nome" required>
@@ -55,6 +55,6 @@ include('./app/models/valida-cpf.php');
         </div>
 
 <?php
-$jsFile = "cadastrar-funcionario.js";
-include('./views/footer.php');
+$jsFile = "script.js";
+include('./components/footer.php');
 ?>

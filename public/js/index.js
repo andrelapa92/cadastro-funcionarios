@@ -5,7 +5,7 @@ const clickedId = (id) => {
 }
 
 const confirmaExclusao = () => {
-    url = `remover-funcionario.php?id=${idModal}`;
+    url = `app/models/modelRemoveFunc.php?id=${idModal}`;
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, false);
     xhttp.send();

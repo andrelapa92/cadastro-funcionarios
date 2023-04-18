@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    require_once('./app/config.php');
+    require_once(__DIR__ . '/../config.php');
 
     if (!$conn) {
         die("A conexão com o banco de dados falhou: " . mysqli_connect_error());
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt) {
         mysqli_stmt_bind_param($stmt, "sssss", $nome, $dt_nascimento, $cpf, $email, $estado_civil);
         mysqli_stmt_execute($stmt);
-        header("Location: index.php");
+        header('Location: ../../index.php');
         mysqli_stmt_close($stmt);
     } else {
         echo "Erro ao cadastrar funcionário: " . mysqli_error($conn);

@@ -1,9 +1,9 @@
-<?php include('./views/header.php'); ?>
+<?php include('./components/header.php'); ?>
 
 <div class='container mt-3 mb-3'>
     <h1 class='text-center mb-5'>Cadastro de funcionários</h1>
 
-    <?php include('./views/tabela.php'); ?>
+    <?php include('./components/tabela.php'); ?>
 
 </div>
 <div class='text-center'>
@@ -16,5 +16,5 @@
 
 <?php
 $jsFile = "index.js";
-include('./views/footer.php');
+include('./components/footer.php');
 ?>

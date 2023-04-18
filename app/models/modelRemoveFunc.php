@@ -1,5 +1,5 @@
 <?php
-include('./app/config.php');
+require_once(__DIR__ . '/../config.php');
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
 
     if ($conn->query($sql) === TRUE) {
         echo "Funcionário removido.";
-        header('Location: index.php');
+        header('Location: ../../index.php');
     } else {
         echo "Erro ao remover funcionário: " . $conn->error;
     }
